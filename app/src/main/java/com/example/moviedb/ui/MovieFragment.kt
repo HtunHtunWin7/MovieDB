@@ -91,7 +91,7 @@ class MovieFragment : Fragment(), MovieAdapter.ClickAction {
         movieAdapter.addLoadStateListener { loadState ->
             if (loadState.refresh is LoadState.Loading) {
                 if (movieAdapter.snapshot().isEmpty()) {
-                    //binding.progressBar.isVisible = true
+                    binding.progressBar.isVisible = true
                 }
                 //binding.errorTxt.isVisible = false
             } else {
