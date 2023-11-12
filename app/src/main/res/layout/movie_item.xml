@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <FrameLayout
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp">
+
+            <ImageView
+                android:background="@color/white"
+                android:id="@+id/imgMovie"
+                android:layout_width="136dp"
+                android:layout_height="210dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                tools:src="@drawable/movie_sample" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="bottom"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="146dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtMovieTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    tools:text="Survivor" />
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Body2"
+                    android:id="@+id/txtOriginalTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    tools:text="@string/sample_text" />
+
+                <TextView
+                    android:id="@+id/txtDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    tools:text="13/4/12" />
+
+                <androidx.appcompat.widget.AppCompatToggleButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/baseline_favorite_border_24"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+</layout>
